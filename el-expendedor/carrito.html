@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Facundo Ciullo, facundonahuel.ciullo@gmail.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>El Expendedor Carrito</title>
+</head>
+<body>
+    <div class="widget">
+        <a class="boton-menu" href="./index.html" style="font-size: 1.5rem; padding: .5rem;">
+            <i class="bi bi-arrow-return-left" alt="boton seguir comprando"></i>
+        </a>
+    </div>
+    <div class="wrapper">
+        <header class="header-mobile">
+            <a class="logo" href="../index.html"><img src="./img/logo.png" alt="logo que dice el expendedor"></a>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+        <aside>
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <header>
+                <a class="logo" href="../index.html"><img src="./img/logo.png" alt="logo que dice el expendedor"></a>
+            </header>
+            <!-- JavaScript menu.js -->
+            <nav>
+                <ul>
+                    <li>
+                        <a class="boton-menu boton-volver" href="./index.html">
+                            <i class="bi bi-arrow-return-left" alt="seguir comprando"></i> Seguir comprando</a>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="./carrito.html">
+                            <i class="bi bi-basket3-fill" alt="carrito" ></i> Carrito</a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <a href="https://www.linkedin.com/in/facundo-ciullo/" target="_blank">                
+                <img class="icon-footer" src="./img/icono-linkedin.svg" alt="ícono de linkedin">
+                </a>
+                <a href="https://www.linkedin.com/in/facundo-ciullo/" target="_blank">
+                <h2 class="texto-footer" alt="enlace a linkedin 2023 Facundo Ciullo">© 2023 Facundo Ciullo</h2>
+                </a>
+            </footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal" alt="sección Carrito">Carrito</h2>
+            <div class="contenedor-carrito">
+
+                <!-- carrito vacío -->
+
+                <p id="carrito-vacio" class="carrito-vacio" alt="Tu carrito está vacío">Tu carrito está vacío <i class="bi bi-basket3"></i></p>
+
+                <!-- contenedor de productos enlistados -->
+
+                <div id="carrito-productos" class="carrito-productos disabled" >
+
+                <!-- JavaScript carrito.js -->
+
+                </div>
+
+                <!-- opción comprar y precio total-->
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda ">
+                        <a href="./formulario.html">
+                            <button id="carrito-acciones-comprar" class="carrito-acciones-comprar" alt="Comprar ahora">Comprar ahora</button>
+                        </a>
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p>
+                        </div>
+                    </div>
+
+                <!-- opción vaciar carrito -->
+
+                    <div class="carrito-acciones-derecha">
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar" alt="vaciar carrito">Vaciar carrito</button>
+                    </div>
+                </div>
+                
+                <!-- confirmación de compra -->
+
+                <div id="carrito-comprado" >
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js" integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+</html>
